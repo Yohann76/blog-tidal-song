@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Chant des Marées</title>
+    <meta name="description" content="Découvrez tous nos articles de pêche en mer. Conseils, techniques, récits et actualités pour tous les passionnés de pêche.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-anchor"></i> Chant des Marées</h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link active">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#techniques" class="nav-link">Techniques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#equipement" class="nav-link">Équipement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1 class="blog-hero-title">Blog de Pêche</h1>
+                <p class="blog-hero-subtitle">Découvrez nos derniers articles, conseils et récits de pêche en mer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <main class="blog-main">
+        <div class="container">
+            <div class="blog-layout">
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+                    <!-- Search -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Rechercher</h3>
+                        <div class="search-form">
+                            <input type="text" id="search-input" placeholder="Rechercher un article..." class="search-input">
+                            <button type="button" id="search-btn" class="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Catégories</h3>
+                        <ul class="category-list" id="category-filter">
+                            <li><a href="#" class="category-link active" data-category="all">Toutes les catégories</a></li>
+                            <li><a href="#" class="category-link" data-category="technique">Techniques</a></li>
+                            <li><a href="#" class="category-link" data-category="equipement">Équipement</a></li>
+                            <li><a href="#" class="category-link" data-category="conseils">Conseils</a></li>
+                            <li><a href="#" class="category-link" data-category="recits">Récits</a></li>
+                            <li><a href="#" class="category-link" data-category="actualites">Actualités</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Articles -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Articles Récents</h3>
+                        <div class="recent-articles" id="recent-articles">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Tags Populaires</h3>
+                        <div class="tag-cloud" id="tag-cloud">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="blog-content">
+                    <!-- Filters Bar -->
+                    <div class="blog-filters">
+                        <div class="filters-left">
+                            <span class="results-count" id="results-count">12 articles trouvés</span>
+                        </div>
+                        <div class="filters-right">
+                            <select id="sort-select" class="sort-select">
+                                <option value="date-desc">Plus récent</option>
+                                <option value="date-asc">Plus ancien</option>
+                                <option value="title-asc">Titre A-Z</option>
+                                <option value="title-desc">Titre Z-A</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Articles Grid -->
+                    <div class="articles-container" id="articles-container">
+                        <!-- Articles will be loaded here by JavaScript -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination-container" id="pagination-container">
+                        <!-- Pagination will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title"><i class="fas fa-anchor"></i> Chant des Marées</h3>
+                    <p class="footer-description">Votre source d'inspiration pour la pêche en mer. Partageons notre passion pour l'océan et ses trésors.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#techniques">Techniques</a></li>
+                        <li><a href="index.html#equipement">Équipement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Guide du Débutant</a></li>
+                        <li><a href="#">Calendrier des Marées</a></li>
+                        <li><a href="#">Réglementation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@chantdesmarees.fr</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bretagne, France</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chant des Marées. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

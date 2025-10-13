@@ -1,0 +1,192 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "Les Secrets de la Pêche au Bar",
+      "excerpt": "Découvrez les techniques éprouvées pour capturer le bar en toute saison, du choix du matériel aux meilleurs spots de pêche.",
+      "content": "Le bar est l'un des poissons les plus recherchés par les pêcheurs en mer...",
+      "author": "Marc Dubois",
+      "date": "2024-01-15",
+      "category": "technique",
+      "tags": ["bar", "technique", "lancer", "carnassier"],
+      "image": "bar-fishing.jpg",
+      "readTime": "8 min",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Guide Complet du Matériel de Pêche",
+      "excerpt": "Tout ce qu'il faut savoir pour choisir son équipement de pêche en mer selon votre budget et vos objectifs.",
+      "content": "Choisir le bon matériel de pêche est essentiel pour réussir vos sorties...",
+      "author": "Sophie Martin",
+      "date": "2024-01-12",
+      "category": "equipement",
+      "tags": ["matériel", "canne", "moulinet", "débutant"],
+      "image": "fishing-gear.jpg",
+      "readTime": "12 min",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "title": "Pêche d'Été : Les Meilleurs Moments",
+      "excerpt": "Optimisez vos sorties de pêche estivales en connaissant les meilleures heures et conditions météo.",
+      "content": "L'été est une saison privilégiée pour la pêche en mer...",
+      "author": "Pierre Leroy",
+      "date": "2024-01-10",
+      "category": "conseils",
+      "tags": ["été", "météo", "timing", "conseils"],
+      "image": "summer-fishing.jpg",
+      "readTime": "6 min",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Ma Première Sortie en Mer",
+      "excerpt": "Récit d'une journée mémorable de pêche en mer pour un débutant, avec ses joies et ses apprentissages.",
+      "content": "Il était 5h du matin quand j'ai quitté la maison...",
+      "author": "Thomas Moreau",
+      "date": "2024-01-08",
+      "category": "recits",
+      "tags": ["débutant", "première fois", "récit", "apprentissage"],
+      "image": "first-fishing.jpg",
+      "readTime": "10 min",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Nouvelles Réglementations 2024",
+      "excerpt": "Découvrez les nouvelles règles de pêche en mer qui entrent en vigueur cette année.",
+      "content": "Le ministère de la Mer a annoncé de nouvelles mesures...",
+      "author": "Service Rédaction",
+      "date": "2024-01-05",
+      "category": "actualites",
+      "tags": ["réglementation", "2024", "lois", "respect"],
+      "image": "regulations.jpg",
+      "readTime": "5 min",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Techniques de Pêche au Surf Casting",
+      "excerpt": "Maîtrisez l'art du surf casting pour pêcher depuis la plage et atteindre les fonds profonds.",
+      "content": "Le surf casting est une technique de pêche spectaculaire...",
+      "author": "Jean-Baptiste Lecomte",
+      "date": "2024-01-03",
+      "category": "technique",
+      "tags": ["surf casting", "plage", "lancer", "technique"],
+      "image": "surf-casting.jpg",
+      "readTime": "15 min",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Choisir ses Leurres pour la Pêche en Mer",
+      "excerpt": "Guide complet pour sélectionner les meilleurs leurres selon les conditions et les espèces ciblées.",
+      "content": "Le choix du leurre est crucial pour la réussite de votre pêche...",
+      "author": "Marie Dubois",
+      "date": "2024-01-01",
+      "category": "equipement",
+      "tags": ["leurres", "sélection", "espèces", "conditions"],
+      "image": "lures.jpg",
+      "readTime": "9 min",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Pêche de Nuit : Conseils et Sécurité",
+      "excerpt": "Tout ce qu'il faut savoir pour pêcher la nuit en toute sécurité et efficacité.",
+      "content": "La pêche de nuit offre des opportunités uniques...",
+      "author": "Alexandre Petit",
+      "date": "2023-12-28",
+      "category": "conseils",
+      "tags": ["nuit", "sécurité", "éclairage", "technique"],
+      "image": "night-fishing.jpg",
+      "readTime": "7 min",
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "Les Poissons de Mer les Plus Courants",
+      "excerpt": "Découvrez les principales espèces de poissons que vous pouvez rencontrer lors de vos sorties de pêche.",
+      "content": "Connaître les poissons de mer est essentiel...",
+      "author": "Dr. Marine Biologist",
+      "date": "2023-12-25",
+      "category": "conseils",
+      "tags": ["espèces", "identification", "biologie", "connaissance"],
+      "image": "fish-species.jpg",
+      "readTime": "11 min",
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "Mon Record Personnel : Un Bar de 8kg",
+      "excerpt": "Récit détaillé de la capture de mon plus beau bar, avec les techniques utilisées et les émotions ressenties.",
+      "content": "Ce matin-là, je ne me doutais pas que j'allais vivre...",
+      "author": "François Leroux",
+      "date": "2023-12-22",
+      "category": "recits",
+      "tags": ["record", "bar", "émotion", "technique"],
+      "image": "big-bass.jpg",
+      "readTime": "13 min",
+      "featured": true
+    },
+    {
+      "id": 11,
+      "title": "Entretien et Stockage du Matériel",
+      "excerpt": "Comment bien entretenir et stocker votre matériel de pêche pour qu'il dure dans le temps.",
+      "content": "Un matériel bien entretenu est un matériel qui dure...",
+      "author": "Technique Expert",
+      "date": "2023-12-20",
+      "category": "equipement",
+      "tags": ["entretien", "stockage", "durabilité", "maintenance"],
+      "image": "gear-maintenance.jpg",
+      "readTime": "6 min",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Pêche en Hiver : Défis et Opportunités",
+      "excerpt": "Les spécificités de la pêche hivernale et les techniques adaptées aux conditions froides.",
+      "content": "L'hiver n'est pas une saison morte pour la pêche...",
+      "author": "Hiver Pêcheur",
+      "date": "2023-12-18",
+      "category": "technique",
+      "tags": ["hiver", "froid", "technique", "saison"],
+      "image": "winter-fishing.jpg",
+      "readTime": "8 min",
+      "featured": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "technique",
+      "name": "Techniques",
+      "description": "Apprenez les différentes techniques de pêche en mer",
+      "icon": "fas fa-fishing-rod"
+    },
+    {
+      "id": "equipement",
+      "name": "Équipement",
+      "description": "Conseils pour choisir et entretenir votre matériel",
+      "icon": "fas fa-tools"
+    },
+    {
+      "id": "conseils",
+      "name": "Conseils",
+      "description": "Astuces et recommandations pour améliorer votre pêche",
+      "icon": "fas fa-lightbulb"
+    },
+    {
+      "id": "recits",
+      "name": "Récits",
+      "description": "Partagez vos expériences et histoires de pêche",
+      "icon": "fas fa-book-open"
+    },
+    {
+      "id": "actualites",
+      "name": "Actualités",
+      "description": "Dernières nouvelles du monde de la pêche",
+      "icon": "fas fa-newspaper"
+    }
+  ]
+}
