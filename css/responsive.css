@@ -1,0 +1,405 @@
+/* ========================================
+   CHANT DES MARÉES - RESPONSIVE DESIGN
+   ======================================== */
+
+/* Breakpoints */
+/* Mobile: 320px - 767px */
+/* Tablet: 768px - 1023px */
+/* Desktop: 1024px+ */
+
+/* Mobile First Approach */
+
+/* Extra Small Devices (phones, 320px and up) */
+@media (min-width: 320px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .article-card {
+        margin-bottom: var(--spacing-lg);
+    }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .btn {
+        width: auto;
+        min-width: 150px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+    
+    .nav-menu {
+        position: static;
+        flex-direction: row;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        width: auto;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-5xl);
+    }
+    
+    .articles-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .article-card.featured {
+        grid-row: span 2;
+    }
+    
+    .techniques-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .newsletter-content {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    
+    .newsletter-form {
+        flex-direction: row;
+    }
+    
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hero-content {
+        gap: var(--spacing-4xl);
+    }
+    
+    .articles-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .techniques-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-6xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+/* Ultra Wide Screens (1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-content {
+        max-width: 1400px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-placeholder i,
+    .technique-icon i,
+    .image-placeholder i {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Print Styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    .header,
+    .hamburger,
+    .hero-waves,
+    .newsletter,
+    .footer {
+        display: none !important;
+    }
+    
+    .hero {
+        background: white !important;
+        color: black !important;
+        min-height: auto !important;
+        padding: 2rem 0 !important;
+    }
+    
+    .hero-title,
+    .section-title,
+    .article-title {
+        color: black !important;
+    }
+    
+    .article-card {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+    
+    a {
+        text-decoration: underline !important;
+    }
+    
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .animate-fadeInUp,
+    .animate-fadeInLeft,
+    .animate-fadeInRight,
+    .animate-pulse,
+    .animate-float {
+        animation: none !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #0f172a;
+        --gray-50: #1e293b;
+        --gray-100: #334155;
+        --gray-200: #475569;
+        --gray-300: #64748b;
+        --gray-400: #94a3b8;
+        --gray-500: #cbd5e1;
+        --gray-600: #e2e8f0;
+        --gray-700: #f1f5f9;
+        --gray-800: #f8fafc;
+        --gray-900: #ffffff;
+    }
+    
+    .header {
+        background: rgba(15, 23, 42, 0.95);
+        border-bottom-color: var(--gray-200);
+    }
+    
+    .article-card {
+        background: var(--gray-50);
+        border: 1px solid var(--gray-200);
+    }
+    
+    .technique-card {
+        background: var(--gray-50);
+        border-color: var(--gray-200);
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        min-height: 100vh;
+        padding-top: 60px;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* Touch Devices */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    .nav-link,
+    .article-link,
+    .social-link {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .article-card:hover,
+    .technique-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover,
+    .nav-link:hover,
+    .article-link:hover,
+    .social-link:hover {
+        transform: none;
+    }
+}
+
+/* Specific Mobile Adjustments */
+@media (max-width: 480px) {
+    .hero-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-placeholder i {
+        font-size: 80px;
+    }
+    
+    .article-image {
+        height: 150px;
+    }
+    
+    .article-card.featured .article-image {
+        height: 200px;
+    }
+    
+    .image-placeholder {
+        font-size: 32px;
+    }
+    
+    .article-card.featured .image-placeholder {
+        font-size: 48px;
+    }
+    
+    .technique-icon {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-xl);
+    }
+    
+    .newsletter-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Tablet Specific Adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-content {
+        gap: var(--spacing-2xl);
+    }
+    
+    .articles-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    .techniques-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    .footer-content {
+        gap: var(--spacing-xl);
+    }
+}
+
+/* Desktop Specific Adjustments */
+@media (min-width: 1024px) {
+    .nav-menu {
+        gap: var(--spacing-2xl);
+    }
+    
+    .hero-content {
+        gap: var(--spacing-4xl);
+    }
+    
+    .articles-grid {
+        gap: var(--spacing-xl);
+    }
+    
+    .techniques-grid {
+        gap: var(--spacing-xl);
+    }
+    
+    .newsletter-content {
+        gap: var(--spacing-4xl);
+    }
+    
+    .footer-content {
+        gap: var(--spacing-3xl);
+    }
+}
+
+/* Ultra-wide Screen Adjustments */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+    
+    .hero-content {
+        max-width: 1600px;
+    }
+    
+    .articles-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+    
+    .techniques-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
