@@ -1,0 +1,17 @@
+# Fichiers à ignorer lors de la construction Docker
+.git
+.gitignore
+README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+*.log
+logs/
+backups/
+ssl/
+webroot/
+node_modules/
+.env
+.env.local
+.env.production
+.env.development

@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # Service principal du site web
+  web:
+    build: .
+    container_name: chant-des-marees-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx-docker.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./logs:/var/log/nginx
+      - ./ssl:/etc/nginx/ssl:ro
+      - ./webroot:/var/www/certbot:ro
+    restart: unless-stopped
+    networks:
+      - chant-des-marees-network
+    environment:
+      - NGINX_HOST=votre-domaine.com
+      - NGINX_PORT=80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.chant-des-marees.rule=Host(`votre-domaine.com`)"
+      - "traefik.http.routers.chant-des-marees.entrypoints=web"
+      - "traefik.http.routers.chant-des-marees-https.rule=Host(`votre-domaine.com`)"
+      - "traefik.http.routers.chant-des-marees-https.entrypoints=websecure"
+      - "traefik.http.routers.chant-des-marees-https.tls.certresolver=letsencrypt"
+
+  # Service pour les certificats SSL (Let's Encrypt)
+  certbot:
+    image: certbot/certbot
+    container_name: chant-des-marees-certbot
+    volumes:
+      - ./ssl:/etc/letsencrypt
+      - ./webroot:/var/www/certbot
+    command: certonly --webroot --webroot-path=/var/www/certbot --email contact@votre-domaine.com --agree-tos --no-eff-email -d votre-domaine.com -d www.votre-domaine.com
+    depends_on:
+      - web
+    networks:
+      - chant-des-marees-network
+
+  # Service de monitoring avec Prometheus
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:0.10.0
+    container_name: chant-des-marees-exporter
+    ports:
+      - "9113:9113"
+    command:
+      - '-nginx.scrape-uri=http://web:80/nginx_status'
+    depends_on:
+      - web
+    networks:
+      - chant-des-marees-network
+
+  # Service de sauvegarde automatisée
+  backup:
+    image: alpine:latest
+    container_name: chant-des-marees-backup
+    volumes:
+      - ./backups:/backups
+      - ./:/source:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command: |
+      sh -c "
+        apk add --no-cache rsync docker-cli &&
+        while true; do
+          echo 'Starting backup...'
+          rsync -av --delete /source/ /backups/$(date +%Y%m%d_%H%M%S)/
+          echo 'Backup completed'
+          sleep 86400
+        done
+      "
+    restart: unless-stopped
+    networks:
+      - chant-des-marees-network
+
+  # Service de surveillance des logs
+  logspout:
+    image: gliderlabs/logspout:latest
+    container_name: chant-des-marees-logspout
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    command: syslog://logs:514
+    depends_on:
+      - web
+    networks:
+      - chant-des-marees-network
+
+networks:
+  chant-des-marees-network:
+    driver: bridge
+
+volumes:
+  ssl_certs:
+    driver: local
+  backup_data:
+    driver: local
