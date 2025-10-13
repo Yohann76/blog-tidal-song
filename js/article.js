@@ -28,132 +28,9 @@ class ArticleManager {
 
     async loadArticles() {
         try {
-            // Même données que dans blog.js pour la cohérence
-            const data = {
-                "articles": [
-                    {
-                        "id": 1,
-                        "title": "Les Secrets de la Pêche au Bar",
-                        "excerpt": "Découvrez les techniques éprouvées pour capturer le bar en toute saison, du choix du matériel aux meilleurs spots de pêche.",
-                        "content": `
-                            <h2>Introduction</h2>
-                            <p>Le bar (Dicentrarchus labrax) est l'un des poissons les plus recherchés par les pêcheurs en mer. Sa combativité et sa qualité gustative en font une prise de choix. Dans cet article, nous allons explorer les techniques les plus efficaces pour capturer ce magnifique poisson.</p>
-                            
-                            <h2>Connaître le Bar</h2>
-                            <p>Le bar est un poisson prédateur qui vit principalement dans les eaux côtières. Il se nourrit de petits poissons, de crustacés et de mollusques. Sa taille peut varier de 30 cm à plus d'1 mètre pour les plus gros spécimens.</p>
-                            
-                            <h3>Habitat et Comportement</h3>
-                            <p>Le bar affectionne particulièrement :</p>
-                            <ul>
-                                <li>Les zones rocheuses avec des courants</li>
-                                <li>Les estuaires et les embouchures de rivières</li>
-                                <li>Les ports et les jetées</li>
-                                <li>Les fonds sableux près des herbiers</li>
-                            </ul>
-                            
-                            <h2>Matériel Recommandé</h2>
-                            <p>Pour pêcher le bar efficacement, il est important de bien choisir son matériel :</p>
-                            
-                            <h3>Canne à Pêche</h3>
-                            <p>Une canne de 2,70m à 3,60m avec une action semi-parabolique est idéale. La puissance doit être adaptée à la technique utilisée :</p>
-                            <ul>
-                                <li><strong>Lancer léger :</strong> 10-30g</li>
-                                <li><strong>Lancer moyen :</strong> 20-60g</li>
-                                <li><strong>Surf casting :</strong> 40-120g</li>
-                            </ul>
-                            
-                            <h3>Moulinet</h3>
-                            <p>Un moulinet de taille 3000-4000 avec un frein progressif et une bonne récupération de ligne (5:1 minimum).</p>
-                            
-                            <h3>Ligne et Accessoires</h3>
-                            <p>Utilisez une ligne de 20-30/100 avec un bas de ligne en fluorocarbone de 15-20/100. Les hameçons de taille 1/0 à 4/0 sont parfaits pour le bar.</p>
-                            
-                            <h2>Techniques de Pêche</h2>
-                            
-                            <h3>1. Pêche au Leurre</h3>
-                            <p>La pêche au leurre est très efficace pour le bar. Voici les leurres les plus productifs :</p>
-                            <ul>
-                                <li><strong>Leurres souples :</strong> Shad, worm, créature</li>
-                                <li><strong>Leurres durs :</strong> Popper, stickbait, jerkbait</li>
-                                <li><strong>Jigs :</strong> Jig head avec shad ou octopus</li>
-                            </ul>
-                            
-                            <h3>2. Pêche à la Buldo</h3>
-                            <p>Technique très efficace consistant à animer un leurre souple près du fond. L'animation doit être lente et régulière avec des pauses.</p>
-                            
-                            <h3>3. Pêche au Vif</h3>
-                            <p>Utilisez des petits poissons vivants (sardine, anchois, mulets) comme appâts. Cette technique est particulièrement efficace en été.</p>
-                            
-                            <h2>Meilleurs Moments</h2>
-                            <p>Le bar est plus actif :</p>
-                            <ul>
-                                <li><strong>Marée montante :</strong> Les 2 premières heures</li>
-                                <li><strong>Marée descendante :</strong> Les 2 dernières heures</li>
-                                <li><strong>Heures :</strong> Aube et crépuscule</li>
-                                <li><strong>Saison :</strong> Printemps et automne</li>
-                            </ul>
-                            
-                            <h2>Conseils Pratiques</h2>
-                            <blockquote>
-                                "La patience et l'observation sont les clés du succès. Observez l'eau, repérez les oiseaux qui plongent, ils vous indiqueront souvent la présence de bars qui chassent."
-                            </blockquote>
-                            
-                            <h3>Techniques d'Animation</h3>
-                            <p>L'animation du leurre est cruciale :</p>
-                            <ol>
-                                <li>Lancez votre leurre dans la zone de pêche</li>
-                                <li>Laissez-le descendre au fond</li>
-                                <li>Récupérez lentement en donnant des petits coups de poignet</li>
-                                <li>Faites des pauses régulières</li>
-                                <li>Variez la vitesse de récupération</li>
-                            </ol>
-                            
-                            <h2>Conclusion</h2>
-                            <p>La pêche au bar demande de la patience et de la technique, mais les récompenses sont à la hauteur de l'effort. N'hésitez pas à expérimenter différentes techniques et à adapter votre approche selon les conditions. Bonne pêche !</p>
-                        `,
-                        "author": "Marc Dubois",
-                        "date": "2024-01-15",
-                        "category": "technique",
-                        "tags": ["bar", "technique", "lancer", "carnassier"],
-                        "image": "bar-fishing.jpg",
-                        "readTime": "8 min",
-                        "featured": true
-                    },
-                    {
-                        "id": 2,
-                        "title": "Guide Complet du Matériel de Pêche",
-                        "excerpt": "Tout ce qu'il faut savoir pour choisir son équipement de pêche en mer selon votre budget et vos objectifs.",
-                        "content": `
-                            <h2>Introduction</h2>
-                            <p>Choisir le bon matériel de pêche est essentiel pour réussir vos sorties. Dans ce guide complet, nous allons vous aider à sélectionner l'équipement adapté à vos besoins et à votre budget.</p>
-                            
-                            <h2>Les Cannes à Pêche</h2>
-                            <p>La canne est l'élément central de votre équipement. Voici les critères à considérer :</p>
-                            
-                            <h3>Types de Cannes</h3>
-                            <ul>
-                                <li><strong>Canne de lancer :</strong> Pour pêcher depuis le bord</li>
-                                <li><strong>Canne de surf casting :</strong> Pour les lancers longue distance</li>
-                                <li><strong>Canne de bateau :</strong> Pour pêcher en mer</li>
-                                <li><strong>Canne de rockfishing :</strong> Pour les zones rocheuses</li>
-                            </ul>
-                            
-                            <h2>Les Moulinets</h2>
-                            <p>Le moulinet doit être choisi en fonction de votre canne et de votre technique de pêche.</p>
-                        `,
-                        "author": "Sophie Martin",
-                        "date": "2024-01-12",
-                        "category": "equipement",
-                        "tags": ["matériel", "canne", "moulinet", "débutant"],
-                        "image": "fishing-gear.jpg",
-                        "readTime": "12 min",
-                        "featured": false
-                    }
-                    // Ajoutez d'autres articles avec du contenu détaillé...
-                ]
-            };
-            
-            this.articles = data.articles;
+            // Utiliser le nouveau système de chargement d'articles
+            this.articleLoader = new ArticleLoader();
+            this.articles = await this.articleLoader.loadAllArticles();
         } catch (error) {
             console.error('Erreur lors du chargement des articles:', error);
             throw error;
@@ -163,16 +40,22 @@ class ArticleManager {
     getCurrentArticleId() {
         const urlParams = new URLSearchParams(window.location.search);
         this.currentArticleId = parseInt(urlParams.get('id')) || 1;
+        console.log('ID de l\'article demandé:', this.currentArticleId);
     }
 
     loadCurrentArticle() {
+        console.log('Articles disponibles:', this.articles);
+        console.log('Recherche de l\'article avec ID:', this.currentArticleId);
+        
         this.currentArticle = this.articles.find(article => article.id === this.currentArticleId);
         
         if (!this.currentArticle) {
+            console.error('Article non trouvé avec ID:', this.currentArticleId);
             this.showError('Article non trouvé');
             return;
         }
 
+        console.log('Article trouvé:', this.currentArticle);
         this.renderArticle();
         this.updatePageTitle();
     }
@@ -444,6 +327,12 @@ class ArticleManager {
     }
 
     getCategoryInfo(categoryId) {
+        if (this.articleLoader) {
+            const categories = this.articleLoader.getCategories();
+            return categories.find(cat => cat.id === categoryId) || { name: 'Autre', icon: 'fas fa-tag' };
+        }
+        
+        // Fallback si l'ArticleLoader n'est pas disponible
         const categories = {
             'technique': { name: 'Techniques', icon: 'fas fa-fishing-rod' },
             'equipement': { name: 'Équipement', icon: 'fas fa-tools' },

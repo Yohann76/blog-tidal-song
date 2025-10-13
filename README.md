@@ -10,11 +10,12 @@ cd blog-tidal-song
 ```
 
 ```
-make logs          # Voir les logs
-make backup        # Sauvegarder
-make ssl           # Obtenir SSL
-make update        # Mettre à jour
+make logs          # See logs
+make backup        # Sauvegarder ?? 
+make ssl           # Obtenir SSL ?? 
+make update        # Update app
 make stop          # Stop app
+make run           # Run app
 ```
 
 ```
@@ -38,9 +39,10 @@ Category:
 
 - add sitemap.xml
 - add robot.txt
-- need find NDD
-- github action for deploy (with ansible?)
-- Manage 404 error 
+- Need find NDD (OVH?)
+- Need OVH VPS
+- Need script ansible for deploy project with docker on VPS (docker...)
+- Github action for deploy (with ansible?)
 
 
 # Deploy 
