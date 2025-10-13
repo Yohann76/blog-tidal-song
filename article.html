@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article - Chant des Marées</title>
+    <meta name="description" content="Découvrez nos articles détaillés sur la pêche en mer. Conseils, techniques et récits pour tous les passionnés.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/article.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <h1><i class="fas fa-anchor"></i> Chant des Marées</h1>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#techniques" class="nav-link">Techniques</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#equipement" class="nav-link">Équipement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Article Hero Section -->
+    <section class="article-hero" id="article-hero">
+        <div class="container">
+            <div class="article-hero-content">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="index.html" class="breadcrumb-link">Accueil</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <a href="blog.html" class="breadcrumb-link">Blog</a>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-current" id="breadcrumb-category">Article</span>
+                </nav>
+
+                <!-- Article Meta -->
+                <div class="article-meta-header">
+                    <span class="article-category" id="article-category">Technique</span>
+                    <span class="article-date" id="article-date">15 Janvier 2024</span>
+                    <span class="article-read-time" id="article-read-time">8 min de lecture</span>
+                </div>
+
+                <!-- Article Title -->
+                <h1 class="article-title" id="article-title">Titre de l'article</h1>
+
+                <!-- Article Excerpt -->
+                <p class="article-excerpt" id="article-excerpt">Résumé de l'article qui donne un aperçu du contenu...</p>
+
+                <!-- Article Author -->
+                <div class="article-author-info">
+                    <div class="author-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="author-details">
+                        <span class="author-name" id="article-author">Marc Dubois</span>
+                        <span class="author-title">Expert en pêche</span>
+                    </div>
+                </div>
+
+                <!-- Article Actions -->
+                <div class="article-actions">
+                    <button class="action-btn" id="share-btn" title="Partager">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="action-btn" id="bookmark-btn" title="Sauvegarder">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                    <button class="action-btn" id="print-btn" title="Imprimer">
+                        <i class="fas fa-print"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <main class="article-main">
+        <div class="container">
+            <div class="article-layout">
+                <!-- Article Content -->
+                <article class="article-content" id="article-content">
+                    <!-- Article Image -->
+                    <div class="article-image" id="article-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+
+                    <!-- Article Body -->
+                    <div class="article-body" id="article-body">
+                        <!-- Content will be loaded here by JavaScript -->
+                    </div>
+
+                    <!-- Article Tags -->
+                    <div class="article-tags" id="article-tags">
+                        <!-- Tags will be loaded here by JavaScript -->
+                    </div>
+
+                    <!-- Article Share -->
+                    <div class="article-share">
+                        <h3>Partager cet article</h3>
+                        <div class="share-buttons">
+                            <a href="#" class="share-btn facebook" data-platform="facebook">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="share-btn twitter" data-platform="twitter">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="#" class="share-btn linkedin" data-platform="linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="#" class="share-btn whatsapp" data-platform="whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article Sidebar -->
+                <aside class="article-sidebar">
+                    <!-- Table of Contents -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Table des matières</h3>
+                        <nav class="table-of-contents" id="table-of-contents">
+                            <!-- Generated by JavaScript -->
+                        </nav>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">Articles similaires</h3>
+                        <div class="related-articles" id="related-articles">
+                            <!-- Generated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="sidebar-widget newsletter-widget">
+                        <h3 class="widget-title">Newsletter</h3>
+                        <p>Recevez nos derniers articles directement dans votre boîte mail.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Votre email" class="newsletter-input" required>
+                            <button type="submit" class="btn btn-primary">S'abonner</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Article Navigation -->
+    <section class="article-navigation">
+        <div class="container">
+            <div class="nav-articles">
+                <a href="#" class="nav-article prev" id="prev-article">
+                    <div class="nav-article-content">
+                        <span class="nav-article-label">Article précédent</span>
+                        <h3 class="nav-article-title" id="prev-article-title">Titre de l'article précédent</h3>
+                    </div>
+                    <div class="nav-article-arrow">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                </a>
+
+                <a href="blog.html" class="nav-article back">
+                    <div class="nav-article-content">
+                        <span class="nav-article-label">Retour au blog</span>
+                        <h3 class="nav-article-title">Voir tous les articles</h3>
+                    </div>
+                    <div class="nav-article-arrow">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </a>
+
+                <a href="#" class="nav-article next" id="next-article">
+                    <div class="nav-article-content">
+                        <span class="nav-article-label">Article suivant</span>
+                        <h3 class="nav-article-title" id="next-article-title">Titre de l'article suivant</h3>
+                    </div>
+                    <div class="nav-article-arrow">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title"><i class="fas fa-anchor"></i> Chant des Marées</h3>
+                    <p class="footer-description">Votre source d'inspiration pour la pêche en mer. Partageons notre passion pour l'océan et ses trésors.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#techniques">Techniques</a></li>
+                        <li><a href="index.html#equipement">Équipement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Guide du Débutant</a></li>
+                        <li><a href="#">Calendrier des Marées</a></li>
+                        <li><a href="#">Réglementation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> contact@chantdesmarees.fr</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bretagne, France</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Chant des Marées. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/article.js"></script>
+</body>
+</html>

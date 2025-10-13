@@ -354,7 +354,7 @@ class BlogManager {
                             <i class="fas fa-user"></i> ${article.author}
                         </span>
                     </div>
-                    <a href="#" class="article-link" data-article-id="${article.id}">
+                    <a href="article.html?id=${article.id}" class="article-link" data-article-id="${article.id}">
                         Lire la suite <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -390,7 +390,7 @@ class BlogManager {
             const formattedDate = this.formatDate(article.date);
             
             return `
-                <a href="#" class="recent-article" data-article-id="${article.id}">
+                <a href="article.html?id=${article.id}" class="recent-article" data-article-id="${article.id}">
                     <div class="recent-article-image">
                         <i class="${categoryInfo.icon}"></i>
                     </div>
@@ -581,16 +581,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new BlogManager();
 });
 
-// Gestion des clics sur les articles
-document.addEventListener('click', (e) => {
-    const articleLink = e.target.closest('.article-link, .recent-article');
-    if (articleLink) {
-        e.preventDefault();
-        const articleId = articleLink.dataset.articleId;
-        if (articleId) {
-            // Ici vous pouvez ajouter la logique pour afficher l'article complet
-            console.log('Article cliqué:', articleId);
-            // Par exemple : window.location.href = `article.html?id=${articleId}`;
-        }
-    }
-});
+// Les liens d'articles sont maintenant des liens directs vers article.html
+// Plus besoin de gestion d'événements pour les clics
