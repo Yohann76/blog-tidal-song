@@ -46,12 +46,26 @@ class TemplateLoader {
     }
 
     /**
+     * Détermine le chemin des templates selon la localisation de la page
+     */
+    getTemplatePath() {
+        const currentPath = window.location.pathname;
+        // Si on est dans le dossier pages, utiliser ../templates
+        if (currentPath.includes('/pages/')) {
+            return '../templates/';
+        }
+        // Sinon, utiliser templates/ directement
+        return 'templates/';
+    }
+
+    /**
      * Charge tous les templates nécessaires
      */
     async loadAllTemplates() {
+        const templatePath = this.getTemplatePath();
         const templates = [
-            { name: 'nav', path: 'templates/_nav.html' },
-            { name: 'footer', path: 'templates/_footer.html' }
+            { name: 'nav', path: `${templatePath}_nav.html` },
+            { name: 'footer', path: `${templatePath}_footer.html` }
         ];
 
         const loadPromises = templates.map(template => 
@@ -78,13 +92,15 @@ class TemplateLoader {
         // Insérer la navigation
         const navElement = document.querySelector('.navbar');
         if (navElement) {
-            await this.insertTemplate('nav', 'templates/_nav.html', navElement);
+            const templatePath = this.getTemplatePath();
+            await this.insertTemplate('nav', `${templatePath}_nav.html`, navElement);
         }
 
         // Insérer le footer
         const footerElement = document.querySelector('.footer');
         if (footerElement) {
-            await this.insertTemplate('footer', 'templates/_footer.html', footerElement);
+            const templatePath = this.getTemplatePath();
+            await this.insertTemplate('footer', `${templatePath}_footer.html`, footerElement);
         }
 
         // Initialiser les événements après chargement
