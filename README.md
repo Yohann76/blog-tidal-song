@@ -44,6 +44,10 @@ Category:
 - Need script ansible for deploy project with docker on VPS (docker...)
 - Github action for deploy (with ansible?)
 
+# Hosting: 
+
+- Github Action + NDD (not good idea because routing SEO is hard, github page is for a simple application)
+- VPS Baremetal + NDD -> Good idea
 
 # Deploy 
 
