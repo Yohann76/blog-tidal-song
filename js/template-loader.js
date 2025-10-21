@@ -93,7 +93,15 @@ class TemplateLoader {
         const navElement = document.querySelector('.navbar');
         if (navElement) {
             const templatePath = this.getTemplatePath();
-            await this.insertTemplate('nav', `${templatePath}_nav.html`, navElement);
+            const currentPath = window.location.pathname;
+            
+            // Utiliser le bon template selon la page
+            let navTemplate = '_nav.html';
+            if (currentPath === '/' || currentPath === '/blog-tidal-song/' || currentPath.endsWith('/blog-tidal-song')) {
+                navTemplate = '_nav-home.html';
+            }
+            
+            await this.insertTemplate('nav', `${templatePath}${navTemplate}`, navElement);
         }
 
         // Insérer le footer
