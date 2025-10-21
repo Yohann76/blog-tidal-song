@@ -4,6 +4,9 @@
 
 class SPARouter {
     constructor() {
+        // Détecter le chemin de base pour GitHub Pages
+        this.basePath = this.detectBasePath();
+        
         this.routes = {
             '/': 'index.html',
             '/blog': 'pages/blog.html',
@@ -15,29 +18,48 @@ class SPARouter {
         this.init();
     }
 
+    detectBasePath() {
+        // Détecter si on est sur GitHub Pages
+        const pathname = window.location.pathname;
+        const isGitHubPages = pathname.includes('/blog-tidal-song/');
+        
+        if (isGitHubPages) {
+            return '/blog-tidal-song';
+        }
+        
+        return '';
+    }
+
     init() {
+        console.log('🚀 SPARouter initialisé avec basePath:', this.basePath);
+        
         // Intercepter les clics sur les liens
         document.addEventListener('click', (e) => {
             const link = e.target.closest('a[href]');
             if (link && this.isInternalLink(link.href)) {
                 e.preventDefault();
+                console.log('🔗 Navigation vers:', link.getAttribute('href'));
                 this.navigate(link.getAttribute('href'));
             }
         });
 
         // Gérer le bouton retour du navigateur
         window.addEventListener('popstate', (e) => {
+            console.log('⬅️ Popstate:', window.location.pathname);
             this.loadPage(window.location.pathname);
         });
 
         // Charger la page initiale
+        console.log('📄 Chargement initial:', window.location.pathname);
         this.loadPage(window.location.pathname);
     }
 
     isInternalLink(href) {
         try {
             const url = new URL(href, window.location.origin);
-            return url.origin === window.location.origin;
+            const isSameOrigin = url.origin === window.location.origin;
+            const isRelative = href.startsWith('/') || href.startsWith('./') || href.startsWith('../');
+            return isSameOrigin || isRelative;
         } catch {
             return false;
         }
@@ -47,9 +69,12 @@ class SPARouter {
         // Nettoyer le chemin
         const cleanPath = this.cleanPath(path);
         
+        // Construire l'URL complète avec le chemin de base
+        const fullPath = this.basePath + cleanPath;
+        
         // Mettre à jour l'URL sans recharger la page
-        if (cleanPath !== window.location.pathname) {
-            window.history.pushState({}, '', cleanPath);
+        if (fullPath !== window.location.pathname) {
+            window.history.pushState({}, '', fullPath);
         }
         
         // Charger la page
@@ -57,10 +82,9 @@ class SPARouter {
     }
 
     cleanPath(path) {
-        // Supprimer le nom du dépôt du chemin si présent
-        const basePath = '/blog-tidal-song';
-        if (path.startsWith(basePath)) {
-            path = path.substring(basePath.length);
+        // Supprimer le chemin de base du chemin si présent
+        if (this.basePath && path.startsWith(this.basePath)) {
+            path = path.substring(this.basePath.length);
         }
         
         // Normaliser le chemin
