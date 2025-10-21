@@ -45,6 +45,11 @@ Category:
 - Github action for deploy (with ansible?)
 
 
+# Hosting
+
+- Github Action : No, it's not a good idea
+- VPS and docker - baremetal + NDD (I think it's good choice)
+
 # Deploy 
 
 with /docker/docker-deploy.sh ? 
